@@ -1,0 +1,45 @@
+@mixin Flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin Button($bg-color: $highlight-color) {
+  // margin: 0.5em 0;
+  background: $bg-color;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 26px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 8px;
+}
+
+@mixin Card {
+  background-color: white;
+  width: 100%;
+  padding: 1em;
+  color: #333;
+}
+
+@mixin Shadow-Card($bg-color) {
+  background-color: $bg-color;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  color: #333;
+}
+
+@mixin Modal-Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}

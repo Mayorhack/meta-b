@@ -1,0 +1,238 @@
+.home {
+  .header {
+    margin-block: 9rem 3rem;
+    @include Flex;
+    gap: 100px;
+    justify-content: stretch;
+    .header_text {
+      width: 60%;
+      h1 {
+        font-size: 5.6rem;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        span {
+          color: $highlight-color;
+        }
+      }
+      p {
+        margin-block: 48px;
+        font-size: 24px;
+        line-height: 35px;
+      }
+      .searchbar {
+        height: 5.4rem;
+        @include Flex;
+        input {
+          width: 100%;
+          height: 100%;
+          background: rgba(247, 247, 247, 0.1);
+          border: 1px solid #a3a3a3;
+          border-radius: 8px 0px 0px 8px;
+          padding: 5px;
+          text-indent: 10px;
+          font-size: 14px;
+          line-height: 130%;
+          &:focus {
+            outline: 1.4px solid #a3a3a3;
+          }
+          &::placeholder {
+            color: #b8b8b8;
+          }
+        }
+        .button {
+          height: 100%;
+          background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.46%);
+          border-radius: 0px 8px 8px 0px;
+          padding-inline: 8.7rem;
+        }
+      }
+    }
+    .grid_pictures {
+      width: 40%;
+      height: 45.9rem;
+      @include Flex;
+      gap: 8px;
+      .first_grid {
+        align-self: flex-end;
+      }
+      .last_grid {
+        align-self: flex-start;
+      }
+      .header_image {
+        height: 176px;
+        width: 234px;
+        border-radius: 15px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .highlighted {
+    margin-block: 4rem 5.8rem;
+    padding-block: 15px;
+    @include Flex;
+    justify-content: space-around;
+    background-color: $highlight-color;
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+  .inspiration {
+    h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 5.3rem;
+    }
+    margin-bottom: 5.3rem;
+  }
+  .metaBnB {
+    background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+    border: 1px solid #000000;
+    padding-block: 10rem;
+    .container {
+      @include Flex;
+      justify-content: stretch;
+      gap: 122px;
+    }
+    .meta_text {
+      width: 40%;
+      h1 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+
+        background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 35px;
+
+        background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-block: 3.8rem 5.7rem;
+      }
+      .button {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: $highlight-color;
+        background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+      }
+    }
+    .metabnb_image {
+      width: 60%;
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .home {
+    .header {
+      gap: 30px;
+
+      margin-block: 3.2rem;
+      .header_text {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .home {
+    .header {
+      margin-block: 3.2rem;
+      justify-content: space-between;
+
+      .header_text {
+        width: 100%;
+        h1 {
+          font-size: 4.8rem;
+        }
+        p {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        .searchbar {
+          .button {
+            padding-inline: 4.2rem;
+          }
+        }
+      }
+      .grid_pictures {
+        width: 100%;
+        .header_image {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+    }
+    .metaBnB {
+      .container {
+        gap: 4rem;
+        .meta_text {
+          h1 {
+            font-size: 4.8rem;
+          }
+          p {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+        .metabnb_image {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    .header {
+      flex-direction: column;
+      gap: 5rem;
+      .grid_pictures {
+        justify-content: center;
+        .header_image {
+          width: 100%;
+        }
+      }
+    }
+    .metaBnB {
+      .container {
+        flex-direction: column-reverse;
+        gap: 5rem;
+        .meta_text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .home {
+    .highlighted {
+      img {
+        width: 24vw;
+        height: auto;
+      }
+    }
+  }
+}

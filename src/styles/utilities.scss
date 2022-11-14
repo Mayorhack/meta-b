@@ -1,0 +1,47 @@
+.highlight {
+  color: $highlight-color;
+}
+.logo {
+  width: auto;
+  height: 3.2rem;
+}
+.wallet_modal {
+  padding: 24px;
+  position: absolute;
+  width: min(400px, 80vw);
+  height: 213px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 16px;
+  h6 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #333333;
+  }
+  .heading {
+    @include Flex;
+    justify-content: space-between;
+    &::after {
+      content: "";
+      left: 0;
+      right: 0;
+      top: 70px;
+      width: 100%;
+      position: absolute;
+      height: 1px;
+      background-color: #cfd8dc;
+    }
+  }
+  .body {
+    .pick {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

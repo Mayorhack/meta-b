@@ -1,0 +1,65 @@
+@import "./mixins";
+@import "./variables";
+@import "./collections.scss";
+@import "./home.scss";
+@import "./navbar.scss";
+@import "./Footer.scss";
+@import "./utilities.scss";
+@import "./place.scss";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-inline: 10px;
+}
+
+.button {
+  @include Button;
+}
+
+.card-component {
+  @include Card;
+  border: 0.1px solid #ccc;
+}
+
+.shadow-card-component {
+  @include Shadow-Card(#ffffff);
+
+  border-radius: 10px;
+}
+
+.modal-overlay {
+  @include Modal-Overlay;
+}
+
+.Layout {
+  overflow-x: hidden;
+}
+@media (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

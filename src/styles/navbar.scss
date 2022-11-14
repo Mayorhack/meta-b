@@ -1,0 +1,134 @@
+.navigation {
+  background: #ffffff;
+  .inner_navigation {
+    padding-block: 3.2rem;
+    @include Flex;
+    justify-content: space-between;
+  }
+  nav {
+    @include Flex;
+    gap: 48px;
+    .active_link {
+      color: $highlight-color;
+    }
+    a {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}
+.menu {
+  display: none;
+}
+.first,
+.middle,
+.last {
+  background: $highlight-color;
+  height: 4px;
+  border-radius: 50px;
+  box-shadow: 0px 0.4px 0.8px rgba(255, 255, 255, 0.3);
+  transition: all 500ms ease-in-out;
+  width: 24px;
+}
+.menu-open .first {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-open .middle {
+  width: 0px;
+}
+.menu-open .last {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.mobile-navigation-logo {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .navigation {
+    .inner_navigation {
+      padding-block: 2.4rem;
+      nav {
+        gap: 24px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .navigation {
+    .container {
+      padding: 0;
+    }
+    overflow-x: hidden;
+    position: relative;
+    height: 71px;
+    font-size: 16px;
+    .mobile-navigation-logo {
+      display: block;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      z-index: 2;
+      width: 100vw;
+      padding: 10px 24px;
+      border-bottom: 1px solid #ebf0ff;
+      background-color: rgba(255, 255, 255, 0.93);
+      .logo {
+        width: 160px;
+      }
+    }
+    .navigation-logo {
+      display: none;
+    }
+  }
+  .navigation .inner_navigation {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    flex-direction: column;
+
+    align-items: center;
+
+    transform: translateX(100%);
+    padding: 40px;
+    opacity: 0;
+    transition: all 350ms;
+    z-index: 100;
+    background: #843fe8;
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      color: #fff;
+      font-size: 20px;
+      height: 100%;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .inner_navigation[data-visible="true"] {
+    transform: translateX(0%);
+    opacity: 1;
+
+    .button {
+      margin-top: 6rem;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+    height: 18px;
+    width: 24px;
+    justify-content: space-between;
+    position: fixed;
+    right: 36px;
+    top: 19px;
+    z-index: 100;
+  }
+}
