@@ -24,24 +24,26 @@ const Navbar = () => {
             <NavLink
               to={"/"}
               className={({ isActive }) => (isActive ? "active_link" : "")}
+              onClick={() => setOpenMenu(false)}
             >
               Home
             </NavLink>
             <NavLink
               to={"/place"}
               className={({ isActive }) => (isActive ? "active_link" : "")}
+              onClick={() => setOpenMenu(false)}
             >
               Place to stay
             </NavLink>
             <NavLink
-              to={"/"}
-              className={({ isActive }) => (isActive ? "active_link" : "")}
+              to={""}
+              className={({ isActive }) => (isActive ? "" : "inactive")}
             >
               NFTs
             </NavLink>
             <NavLink
               to=""
-              className={({ isActive }) => (isActive ? "active_link" : "")}
+              className={({ isActive }) => (isActive ? "" : "inactive")}
             >
               Community
             </NavLink>
@@ -73,9 +75,32 @@ const Navbar = () => {
             <div className="wallet_modal">
               <div className="heading">
                 <h6>Connect Wallet</h6>
-                <h1 onClick={() => setOpenModal(false)}>&times;</h1>
+                <p onClick={() => setOpenModal(false)} className={"close"}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 6L6 18"
+                      stroke="#1A1A1A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6 6L18 18"
+                      stroke="#1A1A1A"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </p>
               </div>
-
+              <div className="line"></div>
               <div className="body">
                 <p>Choose your preferred wallet:</p>
                 <div className="pick">
