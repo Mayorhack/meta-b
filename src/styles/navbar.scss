@@ -11,6 +11,9 @@
     .active_link {
       color: $highlight-color;
     }
+    .inactive {
+      pointer-events: none;
+    }
     a {
       font-size: 20px;
       line-height: 25px;
@@ -112,7 +115,7 @@
     opacity: 1;
 
     .button {
-      margin-top: 6rem;
+      margin-top: 3rem;
     }
   }
   .menu {
