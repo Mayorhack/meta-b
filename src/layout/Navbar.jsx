@@ -46,7 +46,13 @@ const Navbar = () => {
               Community
             </NavLink>
           </nav>
-          <Button text={"Connect Wallet"} onclick={() => setOpenModal(true)} />
+          <Button
+            text={"Connect Wallet"}
+            onclick={() => {
+              setOpenMenu(false);
+              setOpenModal(true);
+            }}
+          />
         </div>
         <div
           className={openMenu ? "menu menu-open" : "menu"}
@@ -62,11 +68,12 @@ const Navbar = () => {
       </div>
       {openModal ? (
         <Modal
+          onclick={() => setOpenModal(false)}
           children={
             <div className="wallet_modal">
               <div className="heading">
                 <h6>Connect Wallet</h6>
-                <h6>&times;</h6>
+                <h1 onClick={() => setOpenModal(false)}>&times;</h1>
               </div>
 
               <div className="body">
