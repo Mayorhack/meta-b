@@ -7,10 +7,12 @@ import headerImage4 from "../assets/image4.png";
 import mbToken from "../assets/mbToken.svg";
 import metaTask from "../assets/metaTask.svg";
 import openSea from "../assets/openSea.svg";
+import { homeData } from "../data/data";
 import Collections from "../components/Collections";
 import metabnb from "../assets/metabnb.png";
 
 const Home = () => {
+  console.log(homeData);
   return (
     <div className="home">
       <header className="header container">
@@ -60,7 +62,7 @@ const Home = () => {
       </section>
       <section className="inspiration container">
         <h1>Inspiration for your next adventure</h1>
-        <Collections />
+        <Collections data={homeData} />
       </section>
       <section className="metaBnB">
         <div className="container">
