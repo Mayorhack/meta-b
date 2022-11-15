@@ -1,7 +1,7 @@
 .navigation {
   background: #ffffff;
   .inner_navigation {
-    padding-block: 3.2rem;
+    padding-block: 32px;
     @include Flex;
     justify-content: space-between;
   }
