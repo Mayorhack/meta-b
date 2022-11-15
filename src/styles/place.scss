@@ -33,6 +33,16 @@
     }
   }
 }
+@media (max-width:990px) {
+  .place{
+    .place_tablist{
+      .desktop_tablist{
+        flex-wrap: wrap;
+      }
+    }
+  }
+  
+}
 @media (max-width: 768px) {
   .place {
     .place_tablist {
