@@ -37,8 +37,10 @@
 
 @media (max-width: 1260px) {
   .collections {
+   
     gap: 1.4rem;
     .card_image {
+      justify-self: center;
       width: 24rem;
     }
   }
