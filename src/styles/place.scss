@@ -8,22 +8,22 @@
       width: 100%;
       @include Flex;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 2rem;
+      line-height: 2.5rem;
       justify-content: space-between;
     }
 
     .location,
     .mobile_tablist {
       font-weight: 400;
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 2rem;
+      line-height: 2.5rem;
       @include Flex;
       background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
       border: 1px solid #b4b4b4;
       border-radius: 8px;
       height: 48px;
-      width: 161px;
+      min-width: 161px;
       padding: 10px 15px;
       justify-content: space-between;
       gap: 30px;
@@ -59,7 +59,7 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 161px;
+          min-width: 161px;
         }
 
         .mobile_tablist_modal_active {
