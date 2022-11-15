@@ -20,7 +20,7 @@
         line-height: 3.5rem;
       }
       .searchbar {
-        height: 5.4rem;
+        height: 54px;
         @include Flex;
         input {
           width: 100%;
@@ -155,8 +155,12 @@
     .header {
       margin-block: 3.2rem;
       justify-content: space-between;
+     
 
-      .header_text {
+      .header_text { 
+        .searchbar{
+        height: 48px;
+      }
         width: 100%;
         h1 {
           font-size: 4.8rem;
