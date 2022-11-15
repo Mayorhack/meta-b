@@ -93,7 +93,7 @@
     .container {
       @include Flex;
       justify-content: stretch;
-      gap: 122px;
+      gap: 12.2rem;
     }
     .meta_text {
       width: 40%;
@@ -109,8 +109,8 @@
       }
       p {
         font-weight: 400;
-        font-size: 18px;
-        line-height: 35px;
+        font-size: 1.8rem;
+        line-height: 3.5rem;
 
         background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
         -webkit-background-clip: text;
@@ -186,6 +186,7 @@
        
         }
         .metabnb_image {
+          width: 100%;
           img {
             width: 100%;
             height: 100%;
