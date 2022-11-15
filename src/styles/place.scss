@@ -15,6 +15,9 @@
 
     .location,
     .mobile_tablist {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
       @include Flex;
       background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
       border: 1px solid #b4b4b4;
